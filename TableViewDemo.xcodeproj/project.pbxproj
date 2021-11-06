@@ -17,6 +17,8 @@
 		0D6CED93273642B700C6E8B2 /* TableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CED92273642B700C6E8B2 /* TableViewDemoTests.m */; };
 		0D6CED9D273642B700C6E8B2 /* TableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CED9C273642B700C6E8B2 /* TableViewDemoUITests.m */; };
 		0D6CED9F273642B700C6E8B2 /* TableViewDemoUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CED9E273642B700C6E8B2 /* TableViewDemoUITestsLaunchTests.m */; };
+		0D6CEDB1273643B300C6E8B2 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6CEDAF273643B300C6E8B2 /* TableViewCell.m */; };
+		0D6CEDB2273643B300C6E8B2 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D6CEDB0273643B300C6E8B2 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		0D6CED98273642B700C6E8B2 /* TableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D6CED9C273642B700C6E8B2 /* TableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDemoUITests.m; sourceTree = "<group>"; };
 		0D6CED9E273642B700C6E8B2 /* TableViewDemoUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDemoUITestsLaunchTests.m; sourceTree = "<group>"; };
+		0D6CEDAE273643B300C6E8B2 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		0D6CEDAF273643B300C6E8B2 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		0D6CEDB0273643B300C6E8B2 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +113,9 @@
 				0D6CED77273642B500C6E8B2 /* AppDelegate.m */,
 				0D6CED79273642B500C6E8B2 /* SceneDelegate.h */,
 				0D6CED7A273642B500C6E8B2 /* SceneDelegate.m */,
-				0D6CED7C273642B500C6E8B2 /* ViewController.h */,
-				0D6CED7D273642B500C6E8B2 /* ViewController.m */,
-				0D6CED7F273642B500C6E8B2 /* Main.storyboard */,
-				0D6CED82273642B700C6E8B2 /* Assets.xcassets */,
-				0D6CED84273642B700C6E8B2 /* LaunchScreen.storyboard */,
+				0D6CEDB3273643BF00C6E8B2 /* Views */,
+				0D6CEDB5273643DF00C6E8B2 /* Controllers */,
+				0D6CEDB6273643EF00C6E8B2 /* SupportingFiles */,
 				0D6CED87273642B700C6E8B2 /* Info.plist */,
 				0D6CED88273642B700C6E8B2 /* main.m */,
 			);
@@ -134,6 +137,43 @@
 				0D6CED9E273642B700C6E8B2 /* TableViewDemoUITestsLaunchTests.m */,
 			);
 			path = TableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		0D6CEDB3273643BF00C6E8B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0D6CED7F273642B500C6E8B2 /* Main.storyboard */,
+				0D6CEDB4273643D300C6E8B2 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0D6CEDB4273643D300C6E8B2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D6CEDAE273643B300C6E8B2 /* TableViewCell.h */,
+				0D6CEDAF273643B300C6E8B2 /* TableViewCell.m */,
+				0D6CEDB0273643B300C6E8B2 /* TableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0D6CEDB5273643DF00C6E8B2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D6CED7C273642B500C6E8B2 /* ViewController.h */,
+				0D6CED7D273642B500C6E8B2 /* ViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0D6CEDB6273643EF00C6E8B2 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0D6CED82273642B700C6E8B2 /* Assets.xcassets */,
+				0D6CED84273642B700C6E8B2 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D6CED86273642B700C6E8B2 /* LaunchScreen.storyboard in Resources */,
+				0D6CEDB2273643B300C6E8B2 /* TableViewCell.xib in Resources */,
 				0D6CED83273642B700C6E8B2 /* Assets.xcassets in Resources */,
 				0D6CED81273642B500C6E8B2 /* Main.storyboard in Resources */,
 			);
@@ -269,6 +310,7 @@
 				0D6CED7E273642B500C6E8B2 /* ViewController.m in Sources */,
 				0D6CED78273642B500C6E8B2 /* AppDelegate.m in Sources */,
 				0D6CED89273642B700C6E8B2 /* main.m in Sources */,
+				0D6CEDB1273643B300C6E8B2 /* TableViewCell.m in Sources */,
 				0D6CED7B273642B500C6E8B2 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TableViewCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *productImage;
+@property (strong, nonatomic) IBOutlet UILabel *productName;
+@property (strong, nonatomic) IBOutlet UIView *cellBackground;
 
 @end
 
