@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,18 +28,60 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcB-FX-Gi7">
-                                <rect key="frame" x="110" y="39.5" width="404" height="21"/>
+                                <rect key="frame" x="110" y="0.0" width="404" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wKN-e3-vOd">
+                                <rect key="frame" x="110" y="50.5" width="146" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWm-uR-1xB">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="IdL-FL-gDV"/>
+                                            <constraint firstAttribute="height" constant="40" id="SJo-Dr-W9K"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="decrease"/>
+                                        <connections>
+                                            <action selector="btnDecreasePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cOB-Qc-9LS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uH5-Jo-BiF">
+                                        <rect key="frame" x="48" y="0.0" width="50" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="vGj-jK-y7q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="975-Z0-P6D">
+                                        <rect key="frame" x="106" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5Bs-dY-UGf"/>
+                                            <constraint firstAttribute="width" constant="40" id="zxK-9m-3NQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="increase"/>
+                                        <connections>
+                                            <action selector="btnIncreasePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kh6-x7-LSc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="DzY-M5-WcR" secondAttribute="bottom" id="1X6-rO-q3z"/>
                             <constraint firstItem="CcB-FX-Gi7" firstAttribute="leading" secondItem="DzY-M5-WcR" secondAttribute="trailing" constant="10" id="3Bf-Bu-1Di"/>
+                            <constraint firstItem="wKN-e3-vOd" firstAttribute="leading" secondItem="DzY-M5-WcR" secondAttribute="trailing" constant="10" id="6JJ-Y7-4q3"/>
+                            <constraint firstItem="wKN-e3-vOd" firstAttribute="top" secondItem="CcB-FX-Gi7" secondAttribute="bottom" constant="30" id="Bog-09-3dU"/>
                             <constraint firstAttribute="trailing" secondItem="CcB-FX-Gi7" secondAttribute="trailing" id="Spy-NJ-k7H"/>
                             <constraint firstItem="DzY-M5-WcR" firstAttribute="top" secondItem="FJv-tc-b8c" secondAttribute="top" id="dVR-Fz-PcJ"/>
-                            <constraint firstItem="CcB-FX-Gi7" firstAttribute="centerY" secondItem="DzY-M5-WcR" secondAttribute="centerY" id="j8P-bK-sgV"/>
+                            <constraint firstItem="CcB-FX-Gi7" firstAttribute="top" secondItem="DzY-M5-WcR" secondAttribute="top" id="eJf-aw-3ja"/>
                             <constraint firstItem="DzY-M5-WcR" firstAttribute="leading" secondItem="FJv-tc-b8c" secondAttribute="leading" id="y76-2i-Ifr"/>
                         </constraints>
                     </view>
@@ -55,8 +98,16 @@
                 <outlet property="cellBackground" destination="FJv-tc-b8c" id="aZr-3f-qBD"/>
                 <outlet property="productImage" destination="DzY-M5-WcR" id="Wx5-3f-YA1"/>
                 <outlet property="productName" destination="CcB-FX-Gi7" id="ObB-9y-IiR"/>
+                <outlet property="qtyLabel" destination="uH5-Jo-BiF" id="wHO-uE-sFU"/>
             </connections>
-            <point key="canvasLocation" x="-24.637681159420293" y="70.647321428571431"/>
+            <point key="canvasLocation" x="-24.637681159420293" y="70.3125"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="decrease" width="40" height="40"/>
+        <image name="increase" width="40" height="40"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
