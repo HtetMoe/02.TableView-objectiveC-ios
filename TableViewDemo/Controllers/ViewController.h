@@ -6,6 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TableViewCell.h"
 
 @interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
