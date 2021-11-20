@@ -50,17 +50,17 @@
     //NSLog(@"selected Row : %@", self.selectedRow);
     
     NSInteger qty = [self.qtyLabel.text integerValue];
-    
-    //prepare data to pass
-    Product *selectedProduct = [[Product alloc] init];
-    selectedProduct.productName = _productName.text;
-    selectedProduct.productQty = @(qty-1).intValue;
-    
-    NSDictionary *dict =  @{@"product": selectedProduct,@"row" : self.selectedRow};
-    
-    //send noti
-    [Utils NSPostNotification:@"decrease" :dict];
-    
+    if(qty > 1){
+        //prepare data to pass
+        Product *selectedProduct = [[Product alloc] init];
+        selectedProduct.productName = _productName.text;
+        selectedProduct.productQty = @(qty-1).intValue;
+        
+        NSDictionary *dict =  @{@"product": selectedProduct,@"row" : self.selectedRow};
+        
+        //send noti
+        [Utils NSPostNotification:@"decrease" :dict];
+    }
 }
 
 //protocol
