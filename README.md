@@ -1,0 +1,2 @@
+- Table View Cell : pass data from cell to VC with NSNotification Center
+- can preview UI in issue tab
